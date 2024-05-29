@@ -1,0 +1,1225 @@
+
+
+/* Start:/local/bitrix/templates/.default/components/bitrix/news/projects/bitrix/news.list/projects-vue/style.css?16893478075410*/
+.projects{
+    padding-bottom: 4rem;
+}
+.projects.--initializing{
+    min-height: 100vh;
+}
+.projects h1{
+    margin-bottom: 0;
+}
+.projects__top-inputs{
+    display: flex;
+    justify-content: flex-end;
+}
+.projects .vue-search-box{
+    --width: 18.9rem;
+}
+
+.projects__none-found{
+    border: 0.1rem solid #ebccd1;
+    background: #f2dede;
+    color: #a94442;
+    font-size: 2rem;
+    padding: 2rem;
+    border-radius: 0.4rem;
+}
+
+.projects__top-inputs__grid-selector{
+    border: none;
+    background: none;
+    padding: 0.6rem;
+    margin-right: 0.5rem;
+    height: 5rem;
+}
+.projects__top-inputs__grid-selector + .projects__top-inputs__grid-selector{
+    margin-right: 2rem;
+}
+.projects__top-inputs__grid-selector__icon{
+    width: 2rem;
+    height: 2rem;
+
+    fill: #333333;
+    opacity: 0.3;
+
+    transition: opacity 0.1s;
+}
+.projects__top-inputs__grid-selector:hover .projects__top-inputs__grid-selector__icon{
+    opacity: 0.5;
+}
+.projects__top-inputs__grid-selector.--active .projects__top-inputs__grid-selector__icon{
+    opacity: 1;
+}
+.projects__top-inputs__grid-selector:focus,
+.projects__top-inputs__grid-selector:active{
+    outline: none;
+}
+
+@media(min-width: 768px){
+    .projects__top-inputs .sort-dropdown{
+        margin-right: 3rem;
+    }
+    .projects__top-inputs .vue-search-box__close{
+        display: none;
+    }
+    .projects__results-wrapper{
+        /*padding-left: 0;*/
+    }
+}
+@media(max-width: 991px){
+    .projects h1{
+        margin-bottom: 2rem;
+    }
+    .projects__top-inputs{
+        justify-content: flex-start;
+    }
+    .projects .projects-series-list .checkbox-button__button{
+        padding: 0.6rem 0.8rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .projects .filter__range-slider__fake{
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 767px){
+    .projects__top-inputs > * + *{
+        margin-left: 2rem;
+    }
+    .projects__top-inputs__mobile-toggle{
+        white-space: nowrap;
+        text-decoration: none;
+        height: 5rem;
+        line-height: 5rem;
+        position: relative;
+    }
+    .projects__top-inputs__mobile-toggle.--is-modified:after{
+        content: '';
+        display: block;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        background: var(--color-orange, #C8821C);
+        border: 0.2rem solid white;
+        right: -0.5rem;
+        top: 1.1rem;
+        position: absolute;
+    }
+    .projects__top-inputs__mobile-toggle span{
+        color: var(--color-text-default, #333);
+        border-bottom: 0.1rem dashed var(--color-link-hover-underline, #A2C037);
+    }
+    .projects__top-inputs__mobile-toggle svg{
+        width: 2rem;
+        height: 2rem;
+        fill: var(--color-green-dark);
+        margin-left: 0.5rem;
+    }
+    .projects .sort-dropdown{
+        margin-right: -5rem;
+        z-index: 0;
+    }
+
+    .projects .vue-search-box{
+        position: absolute;
+
+        transform: scaleX(0);
+        opacity: 0;
+        width: calc(100% - 3rem);
+        left: 1.5rem;
+        margin-left: 0;
+        z-index: 10000;
+
+        transition: opacity 0.1s, transform 0.1s;
+    }
+    .projects .vue-search-box.--mobile-visible{
+        opacity: 1;
+        transform: scaleX(1);
+
+    }
+    .projects__filters-wrapper{
+        height: 0;
+
+        transition: height 0.3s;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1200px) {
+    .projects__filters-wrapper{
+        flex: 0 0 263px;
+        max-width: 263px;
+    }
+}
+
+.projects-fade-active{
+    transition: opacity 200ms;
+}
+.projects-fade{
+    opacity: 0;
+}
+.projects-fade-to{
+    opacity: 1;
+}
+
+.projects__bottom-seo-text{
+    margin-top: 4rem;
+}
+.projects__bottom-seo-text h2{
+    text-align: left;
+    line-height: 1.15;
+}
+.projects__bottom-seo-text h3{
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+    line-height: 1.35;
+}
+.projects__bottom-seo-text h4{
+    margin-top: 4rem;
+}
+.projects__bottom-seo-text h3:not(:first-child) {
+    margin-top: 4rem;
+}
+.projects__bottom-seo-text p + p,
+.projects__bottom-seo-text ul + p,
+.projects__bottom-seo-text ol + p,
+.projects__bottom-seo-text p + ol,
+.projects__bottom-seo-text p + ul{
+    margin-top: 1.5rem;
+}
+.projects__bottom-seo-text strong{
+    font-weight: 700;
+}
+
+.projects__bottom-seo-text p,
+.projects__bottom-seo-text ol,
+.projects__bottom-seo-text ul,
+.projects__bottom-seo-text h2,
+.projects__bottom-seo-text h3,
+.projects__bottom-seo-text h4{
+
+}
+.projects__bottom-seo-text ol,
+.projects__bottom-seo-text ul{
+    line-height: 1.5;
+}
+.projects__bottom-seo-text ul,
+.projects__bottom-seo-text ol,
+.projects__bottom-seo-text ol > li{
+    padding-left: 1.5rem;
+}
+.projects__bottom-seo-text ol ul{
+    padding-left: 2.5rem;
+}
+.projects__bottom-seo-text ol > li + li,
+.projects__bottom-seo-text ul > li + li{
+    margin-top: 1.5rem;
+}
+.projects__bottom-seo-text ol > li p + p,
+.projects__bottom-seo-text ul > li p + p{
+    margin-top: 0.5rem;
+}
+/*.projects__bottom-seo-text ol{*/
+/*    list-style: none;*/
+/*    counter-reset: seo-ol-counter;*/
+/*    padding-left: 4rem;*/
+/*}*/
+/*.projects__bottom-seo-text ol > li{*/
+/*    position: relative;*/
+/*}*/
+/*.projects__bottom-seo-text ol[start]{*/
+/*    counter-set: seo-ol-counter attr(start, int);*/
+/*}*/
+/*.projects__bottom-seo-text ol > li:before{*/
+/*    counter-increment: seo-ol-counter;*/
+/*    content: counter(seo-ol-counter) '.';*/
+
+/*    position: absolute;*/
+/*    left: -4rem;*/
+/*}*/
+
+/* End */
+
+
+/* Start:/local/components/vue//misc/hover-gallery-component/style.css?1689347808866*/
+.hover-gallery {
+    position: relative;
+
+}
+.hover-gallery::before{
+    content: '';
+    display: block;
+
+    padding-top: 68%;
+    width: 100%;
+}
+.hover-gallery__image {
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+}
+.hover-gallery__picture.--show ~ .hover-gallery__picture img{
+    opacity: 0;
+}
+.hover-gallery__markers{
+    --padding: 3rem;
+
+    position: absolute;
+    left: var(--padding);
+    bottom: var(--padding);
+
+    width: calc(100% - var(--padding) * 2);
+    height: 0.3rem;
+
+    display: flex;
+    gap: 0.4rem;
+
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.hover-gallery:hover .hover-gallery__markers{
+    opacity: 1;
+}
+.hover-gallery__marker{
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    background: white;
+    opacity: 0.5;
+}
+.hover-gallery__marker.--active{
+    opacity: 1;
+}
+
+
+/* End */
+
+
+/* Start:/local/components/vue/projects/list/projects-list-item-with-preview/style.css?16893478085217*/
+.project-list-item{
+    position: relative;
+    display: block;
+    color: var(--color-text-default, #333);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+.--with-preview .project-list-item:hover{
+    color: var(--color-text-default, #333);
+    opacity: 1;
+}
+.project-list-item__image-wrapper{
+    position: relative;
+    width: 100%;
+    padding-top: 68%;
+}
+.project-list-item__image{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    object-fit: cover;
+}
+.project-list-item__likes{
+    position: absolute;
+    top: 0;
+    right: 0.5rem;
+
+    min-height: 4rem;
+
+    border: none;
+    background: none;
+    padding: 1rem 0.5rem 1rem 3rem;
+
+    color: white;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.project-list-item__likes svg{
+    width: 2rem;
+    height: 2rem;
+
+    fill: white;
+
+    position: absolute;
+    top: 1rem;
+    left: 0.5rem;
+
+    transition: opacity 0.15s, fill 0.15s;
+}
+.project-list-item__likes:focus{
+    outline: none;
+}
+.project-list-item__likes svg.--contour{
+    -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+.project-list-item__likes svg.--overlay{
+    opacity: 0;
+}
+.project-list-item__likes:hover svg.--overlay{
+    opacity: 1;
+}
+.project-list-item__likes.--liked svg.--overlay{
+    opacity: 1;
+    fill: #e53d3d;
+}
+.project-list-item__likes.--liked:hover svg.--overlay{
+    opacity: 0.7;
+}
+.project-list-item__likes.--liked svg.--contour{
+    opacity: 0;
+}
+
+
+.project-list-item__data{
+    background-color: #f2f2f2;
+    position: relative;
+    height: 10.8rem;
+    padding: 2rem;
+}
+.project-list-item:hover .project-list-item__data{
+    opacity: 0.7;
+}
+
+.project-list-item__technology-info-icon{
+    width: 13px;
+    height: 13px;
+    margin: -5px -5px -4px 3px;
+}
+.project-list-item__name{
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+.project-list-item__name .search-selection{
+    display: inline-block;
+    background-color: var(--color-green-yellowish, #A2C037);
+}
+.project-list-item__action{
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+.project-list-item__old-price{
+    font-size: 1.5rem;
+    width: fit-content;
+    width: -moz-fit-content;
+    position: relative;
+}
+.project-list-item__old-price::after{
+    content: '';
+    display: block;
+    width: calc(100% + 4px);
+    height: 1px;
+    background: #333;
+    position: absolute;
+    top: 1rem;
+    left: -0.2rem;
+}
+.project-list-item__price,
+.project-list-item__area{
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 1.6rem;
+    line-height: 1;
+    font-weight: 900;
+}
+.project-list-item__price{
+    word-spacing: -1px;
+    color: var(--color-orange-middle, #C7811D);
+    white-space: nowrap;
+}
+.project-list-item__price.--individual{
+    font-size: 10px;
+    bottom: 1.8rem;
+    font-weight: bold;
+}
+.project-list-item__price-unit{
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.project-list-item__price-unit .fa{
+    font-weight: 500;
+}
+.project-list-item__old-price .project-list-item__price-unit,
+.project-list-item__old-price .project-list-item__price-unit *{
+    font-weight: 400!important;
+}
+.project-list-item__area{
+    color: var(--color-green-dark, #587640);
+    right: 2rem;
+}
+.project-list-item__area sup{
+    font-size: 50%;
+    top: -0.8em;
+}
+.--with-preview .project-list-item__labels{
+    position: absolute;
+    bottom: 9.8rem;
+    top: unset;
+    left: 0;
+    width: 100%;
+    padding: 0 1.5rem;
+    display: flex;
+    font-weight: 500;
+}
+.project-list-item__labels > *{
+    background-color: white;
+    text-transform: uppercase;
+    border-radius: 9999px;
+    font-size: 1.1rem;
+    line-height: 1.25;
+    padding: 0.2rem 0.8rem;
+    display: block;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.project-list-item__labels > * + *{
+    margin-left: 0.9rem;
+}
+.project-badge-wrapper{
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+.project-badge{
+    width: 4rem;
+    height: 4rem;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.project-badge-tooltip{
+    padding: 0.8rem 1rem 1rem;
+    font-size: 1.3rem;
+    color: rgba(0,0,0,0.7);
+    width: fit-content;
+    width: -moz-fit-content;
+
+    background: white;
+    display: none;
+    position: absolute;
+    bottom: 4.7rem;
+    left: -2rem;
+    border: 1px solid #e1e1e1;
+    white-space: nowrap;
+}
+.project-badge:hover ~ .project-badge-tooltip{
+    display: block;
+}
+.project-badge-tooltip:after{
+    position: absolute;
+    bottom: -0.6rem;
+    left: 3.4rem;
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background-color: white;
+    border-bottom: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+    transform: rotate(-45deg);
+}
+.action_old_school_badge{
+    color: white;
+    background: #C8821C;
+    position: absolute;
+    top: -0.6rem;
+    left: -1rem;
+    -webkit-transform: skewY(-15deg);
+    transform: skewY(-15deg);
+    padding: 0.4rem 1.9rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    backface-visibility: hidden;
+}
+/* End */
+
+
+/* Start:/local/components/vue/projects/list/projects-list-scrollspy/style.css?1689347808915*/
+.projects-list{
+    --gutter: 1rem;
+    --half-gutter: calc(var(--gutter) / 2);
+}
+.projects-list > .row{
+    --margin: calc(var(--half-gutter) * -1);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+
+    margin-bottom: -1.5rem;
+}
+.projects-list > .row > [class*=col]{
+    padding-left: var(--half-gutter);
+    padding-right: var(--half-gutter);
+
+    margin-bottom: 1.5rem;
+}
+
+.projects-list__transition{
+    transition: opacity 200ms;
+}
+
+.projects-list__text-append{
+    background-color: var(--color-background-gray-light-medium, #f2f2f2);
+    padding: 2rem 2rem 0;
+
+    height: 100%;
+}
+.projects-list__text-append > *{
+    line-height: 1.2;
+}
+.projects-list__text-append h4{
+    margin-bottom: 1rem;
+}
+.projects-list__text-append p{
+    margin-bottom: 1.5rem;
+}
+
+.projects-list .--dummy .project-list-item__wrapper{
+    padding-top: calc(68% + 10.8rem);
+    background: #f2f2f2;
+    width: 100%;
+}
+/* End */
+
+
+/* Start:/local/components/vue/projects/list/projects-list/style.css?1689347808779*/
+.projects-list{
+    --gutter: 1rem;
+    --half-gutter: calc(var(--gutter) / 2);
+}
+.projects-list > .row{
+    --margin: calc(var(--half-gutter) * -1);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+
+    margin-bottom: -1.5rem;
+}
+.projects-list > .row > [class*=col]{
+    padding-left: var(--half-gutter);
+    padding-right: var(--half-gutter);
+
+    margin-bottom: 1.5rem;
+}
+
+.projects-list__transition{
+    transition: opacity 200ms;
+}
+
+.projects-list__text-append{
+    background-color: var(--color-background-gray-light-medium, #f2f2f2);
+    padding: 2rem 2rem 0;
+
+    height: 100%;
+}
+.projects-list__text-append > *{
+    line-height: 1.2;
+}
+.projects-list__text-append h4{
+    margin-bottom: 1rem;
+}
+.projects-list__text-append p{
+    margin-bottom: 1.5rem;
+}
+/* End */
+
+
+/* Start:/local/components/vue/form/checkbox-button/style.css?16893478081741*/
+.checkbox-button{
+    display: inline-block;
+    margin-bottom: 0;
+    --button-background-hover: #e5e5e5;
+
+    --button-background-checked: var(--color-green-yellowish, #A2C037);
+    --button-color-checked: white;
+}
+.checkbox-button__input{
+    display: none;
+}
+.checkbox-button__button{
+    --button-background: var(--color-background-gray-light-medium, #f2f2f2);
+    --button-color: var(--color-text-default, #333);
+    display: block;
+    background-color: var(--button-background);
+    border-radius: 0.4rem;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.4rem;
+    color: var(--button-color);
+    height: auto;
+
+    transition: background-color 0.2s, color 0.2s;
+}
+.checkbox-button:hover:not(.--disabled) .checkbox-button__button,
+.checkbox-button:focus:not(.--disabled) .checkbox-button__button{
+    --button-background: var(--button-background-hover);
+}
+
+.checkbox-button__input:checked ~ .checkbox-button__button,
+.checkbox-button.--checked .checkbox-button__button{
+    --button-background: var(--button-background-checked);
+    --button-color: var(--button-color-checked);
+    --button-background-hover: #bcdc44;
+    font-weight: 500;
+}
+.checkbox-button:hover .checkbox-button__input:checked:not(:disabled) ~ .checkbox-button__button,
+.checkbox-button:focus .checkbox-button__input:checked:not(:disabled) ~ .checkbox-button__button,
+.checkbox-button:hover:not(.--disabled) .checkbox-button.--checked .checkbox-button__button,
+.checkbox-button:focus:not(.--disabled) .checkbox-button.--checked .checkbox-button__button{
+    --button-background: var(--button-background-checked);
+    --button-color: var(--button-color-checked);
+    font-weight: 500;
+}
+.checkbox-button__input:disabled ~ .checkbox-button__button{
+    opacity: 0.5;
+}
+
+/* End */
+
+
+/* Start:/local/components/vue/projects/list/projects-series-list/style.css?1689347808742*/
+.projects-series-list__buttons .checkbox-button{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    background: none;
+    border: none;
+    padding: 0;
+    display: inline-block;
+}
+.projects-series-list__buttons .checkbox-button:focus,
+.projects-series-list__buttons .checkbox-button:active{
+    outline: none;
+}
+.projects-series__list__section-title{
+    margin-top: 3rem;
+    font-size: var(--h2-size);
+    margin-bottom: 0;
+}
+.projects-series__list__section-description{
+    margin-top: 0;
+    margin-bottom: 1.3rem;
+}
+@media (max-width: 767px) {
+    .projects-series__list__section-title{
+        font-size: 2.4rem;
+        margin-bottom: 0.4rem;
+    }
+    .projects-series__list__section-description{
+        font-size: 1.4rem;
+    }
+}
+/* End */
+
+
+/* Start:/local/components/vue/form/checkbox-2/style.css?16893478081472*/
+.vue-checkbox-2{
+    --box-size: 2rem;
+    --line-height: 1.2;
+    --font-size: 1.6rem;
+
+    position: relative;
+    display: inline-block;
+
+    padding-left: calc(var(--box-size) + 1rem);
+    padding-top: calc((var(--box-size) - (var(--font-size) * var(--line-height))) / 2);
+    min-height: var(--box-size);
+
+    line-height: normal;
+    cursor: pointer;
+}
+.vue-checkbox-2-input{
+    display: none;
+}
+.vue-checkbox-2-box{
+    display: block;
+    width: var(--box-size);
+    height: var(--box-size);
+    font-size: var(--box-size) !important;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-radius: 0.5rem;
+    border: 0.2rem solid #eeeeee;
+    background-color: #eeeeee;
+}
+.vue-checkbox-2-box::before{
+    display: inline-block;
+    font-size: 1.2em;
+    position: relative;
+    top: -0.2em;
+    left: -0.05em;
+
+    transform: scale(0);
+    transform-origin: 40% 57%;
+
+    transition: transform 0.2s;
+    color: #333333;
+}
+.vue-checkbox-2-input:checked ~ .vue-checkbox-2-box::before{
+    transform: scale(1);
+}
+.vue-checkbox-2-input:checked ~ .vue-checkbox-2-box,
+.vue-checkbox-2:hover:not(.--disabled) .vue-checkbox-2-box{
+    border-color: #99cc33;
+}
+.vue-checkbox-2:hover:not(.--disabled) .vue-checkbox-2-box{
+    background-color: #fafafa;
+}
+.vue-checkbox-2-input:checked ~ .vue-checkbox-2-box{
+    background-color: white;
+}
+
+.vue-checkbox-2-input:disabled ~ .vue-checkbox-2-box{
+    opacity: 0.4;
+}
+.vue-checkbox-2.--disabled{
+    color: #33333388;
+}
+/* End */
+
+
+/* Start:/local/js/vendor/libs/nouislider/nouislider.min.css?16893478084294*/
+/*! nouislider - 14.5.0 - 5/11/2020 */
+.noUi-target,.noUi-target *{-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;-ms-touch-action:none;touch-action:none;-ms-user-select:none;-moz-user-select:none;user-select:none;-moz-box-sizing:border-box;box-sizing:border-box}.noUi-target{position:relative}.noUi-base,.noUi-connects{width:100%;height:100%;position:relative;z-index:1}.noUi-connects{overflow:hidden;z-index:0}.noUi-connect,.noUi-origin{will-change:transform;position:absolute;z-index:1;top:0;right:0;-ms-transform-origin:0 0;-webkit-transform-origin:0 0;-webkit-transform-style:preserve-3d;transform-origin:0 0;transform-style:flat}.noUi-connect{height:100%;width:100%}.noUi-origin{height:10%;width:10%}.noUi-txt-dir-rtl.noUi-horizontal .noUi-origin{left:0;right:auto}.noUi-vertical .noUi-origin{width:0}.noUi-horizontal .noUi-origin{height:0}.noUi-handle{-webkit-backface-visibility:hidden;backface-visibility:hidden;position:absolute}.noUi-touch-area{height:100%;width:100%}.noUi-state-tap .noUi-connect,.noUi-state-tap .noUi-origin{-webkit-transition:transform .3s;transition:transform .3s}.noUi-state-drag *{cursor:inherit!important}.noUi-horizontal{height:18px}.noUi-horizontal .noUi-handle{width:34px;height:28px;right:-17px;top:-6px}.noUi-vertical{width:18px}.noUi-vertical .noUi-handle{width:28px;height:34px;right:-6px;top:-17px}.noUi-txt-dir-rtl.noUi-horizontal .noUi-handle{left:-17px;right:auto}.noUi-target{background:#FAFAFA;border-radius:4px;border:1px solid #D3D3D3;box-shadow:inset 0 1px 1px #F0F0F0,0 3px 6px -5px #BBB}.noUi-connects{border-radius:3px}.noUi-connect{background:#3FB8AF}.noUi-draggable{cursor:ew-resize}.noUi-vertical .noUi-draggable{cursor:ns-resize}.noUi-handle{border:1px solid #D9D9D9;border-radius:3px;background:#FFF;cursor:default;box-shadow:inset 0 0 1px #FFF,inset 0 1px 7px #EBEBEB,0 3px 6px -3px #BBB}.noUi-active{box-shadow:inset 0 0 1px #FFF,inset 0 1px 7px #DDD,0 3px 6px -3px #BBB}.noUi-handle:after,.noUi-handle:before{content:"";display:block;position:absolute;height:14px;width:1px;background:#E8E7E6;left:14px;top:6px}.noUi-handle:after{left:17px}.noUi-vertical .noUi-handle:after,.noUi-vertical .noUi-handle:before{width:14px;height:1px;left:6px;top:14px}.noUi-vertical .noUi-handle:after{top:17px}[disabled] .noUi-connect{background:#B8B8B8}[disabled] .noUi-handle,[disabled].noUi-handle,[disabled].noUi-target{cursor:not-allowed}.noUi-pips,.noUi-pips *{-moz-box-sizing:border-box;box-sizing:border-box}.noUi-pips{position:absolute;color:#999}.noUi-value{position:absolute;white-space:nowrap;text-align:center}.noUi-value-sub{color:#ccc;font-size:10px}.noUi-marker{position:absolute;background:#CCC}.noUi-marker-sub{background:#AAA}.noUi-marker-large{background:#AAA}.noUi-pips-horizontal{padding:10px 0;height:80px;top:100%;left:0;width:100%}.noUi-value-horizontal{-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}.noUi-rtl .noUi-value-horizontal{-webkit-transform:translate(50%,50%);transform:translate(50%,50%)}.noUi-marker-horizontal.noUi-marker{margin-left:-1px;width:2px;height:5px}.noUi-marker-horizontal.noUi-marker-sub{height:10px}.noUi-marker-horizontal.noUi-marker-large{height:15px}.noUi-pips-vertical{padding:0 10px;height:100%;top:0;left:100%}.noUi-value-vertical{-webkit-transform:translate(0,-50%);transform:translate(0,-50%);padding-left:25px}.noUi-rtl .noUi-value-vertical{-webkit-transform:translate(0,50%);transform:translate(0,50%)}.noUi-marker-vertical.noUi-marker{width:5px;height:2px;margin-top:-1px}.noUi-marker-vertical.noUi-marker-sub{width:10px}.noUi-marker-vertical.noUi-marker-large{width:15px}.noUi-tooltip{display:block;position:absolute;border:1px solid #D9D9D9;border-radius:3px;background:#fff;color:#000;padding:5px;text-align:center;white-space:nowrap}.noUi-horizontal .noUi-tooltip{-webkit-transform:translate(-50%,0);transform:translate(-50%,0);left:50%;bottom:120%}.noUi-vertical .noUi-tooltip{-webkit-transform:translate(0,-50%);transform:translate(0,-50%);top:50%;right:120%}.noUi-horizontal .noUi-origin>.noUi-tooltip{-webkit-transform:translate(50%,0);transform:translate(50%,0);left:auto;bottom:10px}.noUi-vertical .noUi-origin>.noUi-tooltip{-webkit-transform:translate(0,-18px);transform:translate(0,-18px);top:auto;right:28px}
+/* End */
+
+
+/* Start:/local/components/vue/form/double-range-slider-2/style.css?16893478082467*/
+.filter__range-slider{
+    --border-radius: 10px;
+    --handle-size: 2.6rem;
+    --input-hover-bg: #dcdcdc;
+
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    padding-bottom: 13px;
+}
+.filter__range-slider__clear{
+    position: absolute;
+    font-size: 14px;
+    right: 0;
+    bottom: 75px;
+    color: #333;
+    cursor: pointer;
+}
+.filter__range-slider__clear:hover {
+    color: #333;
+    text-decoration: none;
+}
+.filter__range-slider__fake{
+    flex-basis: calc(50% - 1px);
+
+    height: 50px;
+    background: #f2f2f2;
+    color: rgba(51, 51, 51, 0.5);
+    font-size: 18px;
+    font-weight: normal;
+    border: none;
+    min-width: 0;
+    padding-left: 12px;
+}
+.filter__range-slider__fake:focus,
+.filter__range-slider__fake:hover{
+    background-color: var(--input-hover-bg);
+}
+.filter__range-slider__fake:focus{
+    outline: none;
+}
+.filter__range-slider__fake-active{
+    color: rgba(51, 51, 51, 1);
+}
+.filter__range-slider__fake--left{
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    margin-right: 2px;
+    padding-left: 15px;
+    text-align: left;
+}
+.filter__range-slider__fake--right{
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    padding-right: 15px;
+    text-align: right;
+}
+.filter__range-slider__range{
+    position: absolute;
+    bottom: 6px;
+    left: 10px;
+    width: calc(100% - 20px);
+    border-radius: 7px;
+    border: solid 1px #dcdcdc;
+    padding: 0 11px;
+}
+.filter__range-slider__range.noUi-horizontal{
+    height: 1.4rem;
+}
+.filter__range-slider__range .noUi-target{
+    background: #e2e2e2;
+    border-color: #e2e2e2;
+}
+.filter__range-slider__range .noUi-connects{
+    margin: 0;
+    width: 100%;
+    background-image: none;
+}
+.filter__range-slider__range .noUi-connect{
+    background-image: linear-gradient(to right, #99cc33, #587640);
+}
+.filter__range-slider__range .noUi-handle{
+    width: var(--handle-size);
+    height: var(--handle-size);
+    border-radius: 50%;
+    background: none;
+    background-image: linear-gradient(to top, #cccccc, #fafafa);
+    border: solid 1px #dcdcdc;
+    right: -13px;
+    box-shadow: none;
+    cursor: e-resize;
+}
+.filter__range-slider__range .noUi-handle:hover{
+    background-image: linear-gradient(to top, #dddddd, #ffffff);
+}
+.filter__range-slider__range .noUi-handle:before,
+.filter__range-slider__range .noUi-handle:after{
+    content: none;
+}
+
+
+/* End */
+
+
+/* Start:/local/css/elements/gwd.button.green2.css?1689347808429*/
+button.btn.btn-green2,
+a.btn.btn-green2{
+    --button-color: white;
+    --button-background: #587640;
+
+    padding-left: 3.6rem;
+    padding-right: 3.6rem;
+    font-weight: 500;
+}
+button.btn.btn-green2:not(:disabled):hover,
+a.btn.btn-green2:not(:disabled):hover{
+    --button-background: #79a258;
+    text-decoration: none;
+}
+button.btn.btn-green2:not(:disabled):focus,
+a.btn.btn-green2:not(:disabled):focus{
+    outline: none;
+}
+/* End */
+
+
+/* Start:/local/css/elements/gwd.button.gray.css?1689347808216*/
+.btn.btn-gray{
+    --button-background: var(--color-background-gray-light-medium, #f2f2f2);;
+    --button-color: #333;
+
+    font-weight: 500;
+}
+
+.btn.btn-gray:not(:disabled):hover{
+    --button-background: #e5e5e5;
+}
+/* End */
+
+
+/* Start:/local/components/vue/projects/list/projects-filter/style.css?16893478081676*/
+.projects-filter .control-label{
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+.projects-filter .form-group + .form-group{
+    margin-top: 3rem;
+}
+.projects-filter .checkbox-button-row .checkbox-button__button{
+    font-size: 1.6rem;
+}
+.projects-filter .checkbox-button-row{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 1.5rem;
+}
+.projects-filter .checkbox-button-row .checkbox-button{
+    flex-grow: 1;
+}
+.projects-filter .checkbox-button-row .checkbox-button__button{
+    border-radius: 0;
+}
+.projects-filter .checkbox-button-row .checkbox-button:first-child .checkbox-button__button{
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+}
+.projects-filter .checkbox-button-row .checkbox-button:last-child .checkbox-button__button{
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+}
+.projects-filter .checkbox-button-row .checkbox-button:not(.--checked) + .checkbox-button:not(.--checked){
+    border-left: 0.1rem solid #e4e4e4;
+}
+.projects-filter .checkbox-button-row .checkbox-button.--checked + .checkbox-button.--checked{
+    border-left: 0.1rem solid #97b335;
+}
+.projects-filter .vue-checkbox-2{
+    --box-size: 2.6rem;
+    display: block;
+}
+.projects-filter .vue-checkbox-2 + .vue-checkbox-2{
+    margin-top: 1.5rem;
+}
+.projects-filter__clear{
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.projects-filter__individual{
+    height: unset;
+}
+.projects-filter__bottom-buttons .btn{
+    font-size: 2rem;
+    height: unset;
+}
+.projects-filter__separator{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    height: 0.1rem;
+    width: 100%;
+
+    background-color: #f2f2f2;
+}
+/* End */
+
+
+/* Start:/local/components/vue/form/base-dropdown/style.css?16893478081535*/
+.base-dropdown{
+    --base-height: 5rem;
+    --option-height: 3rem;
+    height: var(--base-height);
+    width: fit-content;
+    width: -moz-fit-content;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.base-dropdown__background{
+    position: relative;
+    border-radius: 1rem;
+    background: #f2f2f2;
+    z-index: 10;
+}
+.base-dropdown__current,
+.base-dropdown__option{
+    padding-left: 2rem;
+    padding-right: 4rem;
+
+    white-space: nowrap;
+}
+.base-dropdown__current{
+    height: var(--base-height);
+    line-height: var(--base-height);
+    border-radius: 1rem;
+
+    cursor: pointer;
+    position: relative;
+}
+.base-dropdown__caret{
+    height: var(--base-height);
+    width: 1rem;
+
+    position: absolute;
+    right: 1.5rem;
+    top: 0;
+
+}
+.base-dropdown__list{
+    transform-origin: top center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.15s;
+}
+.base-dropdown__option{
+    display: block;
+    text-decoration: none;
+    color: #333;
+    height: var(--option-height);
+    line-height: var(--option-height);
+    cursor: pointer;
+}
+.base-dropdown__list-content-wrapper{
+    padding-bottom: 1rem;
+}
+.base-dropdown.--open .base-dropdown__background{
+    box-shadow: 0 3px 5px 0 rgba(0, 1, 5, 0.1);
+}
+.base-dropdown:hover .base-dropdown__list,
+.base-dropdown.--open .base-dropdown__list{
+    will-change: height;
+}
+.base-dropdown__current:hover,
+.base-dropdown__option:hover{
+    background: #e5e5e5;
+}
+.base-dropdown__option:hover{
+    color: #333;
+}
+/* End */
+
+
+/* Start:/local/components/vue/projects/list/sort-dropdown/style.css?16893478081152*/
+.base-dropdown__option .sort-dropdown__option-prefix{
+    opacity: 0;
+}
+.base-dropdown__current .sort-dropdown__option-content{
+    border-bottom: 0.1rem dashed var(--color-link-hover-underline, #A2C037);
+}
+.base-dropdown__current .sort-dropdown__option-content:hover {
+    color: var(--color-green-yellowish, #A2C037);
+}
+
+@media(max-width: 767px){
+    .sort-dropdown{
+        height: unset;
+    }
+    .sort-dropdown__icon{
+        width: 2rem;
+        height: 2rem;
+    }
+    .base-dropdown__background{
+        background: transparent;
+    }
+    .sort-dropdown .base-dropdown__option.--active{
+        font-weight: 500;
+        color: var(--color-green-dark);
+    }
+    .sort-dropdown .base-dropdown__option,
+    .sort-dropdown .base-dropdown__current{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .sort-dropdown .projects__top-inputs__mobile-toggle svg{
+        transform: scaleX(-1);
+    }
+    .base-dropdown__current:hover{
+        background: none;
+    }
+    .base-dropdown.--open .base-dropdown__background{
+        box-shadow: none;
+    }
+    .sort-dropdown .base-dropdown__option:hover{
+        background: transparent;
+    }
+}
+/* End */
+
+
+/* Start:/local/components/vue/form/search-box/style.css?16893478081337*/
+.vue-search-box{
+    --height: 50px;
+    --width: 216px;
+    --input-bg: #f2f2f2;
+    --input-bg-hover: #e3e3e3;
+    --border-radius: 10px;
+    --button-width: var(--height);
+    position: relative;
+    width: var(--width);
+}
+.vue-search-box__input{
+    height: var(--height);
+    width: 100%;
+    background-color: var(--input-bg);
+
+    padding-left: 20px;
+    padding-right: var(--button-width);
+
+    font-size: 16px;
+
+    border: none;
+    border-radius: var(--border-radius);
+
+    transition: background 0.2s;
+}
+.vue-search-box__input:hover{
+    background: var(--input-bg-hover);
+}
+.vue-search-box__input:focus{
+    outline: none;
+}
+.vue-search-box__button{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: var(--height);
+    width: var(--button-width);
+
+    background: none;
+    border: none;
+}
+.vue-search-box__icon{
+    height: 22px;
+    width: 22px;
+
+    fill: rgba(51, 51, 51, 0.3);
+
+    transition: fill 0.2s;
+}
+.vue-search-box__close{
+    width: 3rem;
+    height: 3rem;
+    border: 0.2rem solid white;
+    background: #dcdcdc;
+    color: #aaa;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+}
+.vue-search-box__button:focus{
+    outline: none;
+}
+.vue-search-box__button:hover .vue-search-box__icon:last-child{
+    fill: #b0b0b0;
+}
+/* End */
+/* /local/bitrix/templates/.default/components/bitrix/news/projects/bitrix/news.list/projects-vue/style.css?16893478075410 */
+/* /local/components/vue//misc/hover-gallery-component/style.css?1689347808866 */
+/* /local/components/vue/projects/list/projects-list-item-with-preview/style.css?16893478085217 */
+/* /local/components/vue/projects/list/projects-list-scrollspy/style.css?1689347808915 */
+/* /local/components/vue/projects/list/projects-list/style.css?1689347808779 */
+/* /local/components/vue/form/checkbox-button/style.css?16893478081741 */
+/* /local/components/vue/projects/list/projects-series-list/style.css?1689347808742 */
+/* /local/components/vue/form/checkbox-2/style.css?16893478081472 */
+/* /local/js/vendor/libs/nouislider/nouislider.min.css?16893478084294 */
+/* /local/components/vue/form/double-range-slider-2/style.css?16893478082467 */
+/* /local/css/elements/gwd.button.green2.css?1689347808429 */
+/* /local/css/elements/gwd.button.gray.css?1689347808216 */
+/* /local/components/vue/projects/list/projects-filter/style.css?16893478081676 */
+/* /local/components/vue/form/base-dropdown/style.css?16893478081535 */
+/* /local/components/vue/projects/list/sort-dropdown/style.css?16893478081152 */
+/* /local/components/vue/form/search-box/style.css?16893478081337 */
